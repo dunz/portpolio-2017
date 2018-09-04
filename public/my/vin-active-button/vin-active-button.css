@@ -1,0 +1,57 @@
+﻿.vin-active-button {
+    position:relative;
+    width:40px;
+    height:50px;
+    cursor:pointer;
+    display:inline-block;
+}
+.vin-active-button div {
+    transition:all .3s ease;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0) translate3d(0,0,0) scale(1.0, 1.0);
+
+}
+.vin-active-button div {
+    position:absolute;
+    width:100%;
+    height:10px;
+    /*background:#545454;*/
+    background:#fff;
+    top:calc(50% - 5px);
+    border-radius:5px;
+}
+
+.vin-active-button div:nth-child(1) {
+  transform: translate(0, -150%);
+}
+.vin-active-button div:nth-child(2) {
+  /*background:red;*/
+}
+.vin-active-button div:nth-child(3) {
+  transform: translate(0, 150%);
+  /*background:#ffd800;*/
+}
+
+.vin-active-button.cross div:nth-child(1) {
+  transform: rotate(45deg);
+}
+.vin-active-button.cross div:nth-child(2) {
+    transform: translate(0, 100%);
+  opacity: 0;
+}
+.vin-active-button.cross div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.vin-active-button.arrow div:nth-child(1) {
+  transform-origin: right center;
+  transform: translateY(25%) rotate(30deg);
+}
+.vin-active-button.arrow div:nth-child(3) {
+  transform-origin: right center;
+  transform: translateY(-25%) rotate(-30deg);
+}
+.vin-active-button.arrow div:nth-child(2) {
+  opacity: 0;
+}

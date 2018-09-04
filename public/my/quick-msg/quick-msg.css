@@ -1,0 +1,15 @@
+﻿.quick-msg {
+    display:inline-block;
+    color: #fff;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size:12px;
+    opacity:0;
+    transition:all .3s linear;
+}
+.quick-msg.on {
+    opacity:1;
+    color:red;
+    color:#1eb6d2;
+}

@@ -1,0 +1,51 @@
+<style type="text/css">
+    .box {
+        width:100px;
+        height:50px;
+        background:orange;
+    }
+    .link {
+        color:#4f82b0;
+        font-size:1.5rem;
+    }
+</style>
+<main class="content-main">
+    <article class="usage">
+        <dl>
+            <dt>모듈명 : Vin Tip</dt>
+            <dd>설명 : 마우스 오버시 노출되는 문구를 간편하게 추가하기위한 CSS로 구성된 메시지 박스입니다.</dd>
+        </dl>
+        <dl>
+            <dt>Load Files :</dt>
+            <dd>vin-tip/vin-tip.css</dd>
+            <dd>vin-tip/vin-tip.js</dd>
+        </dl>
+        <dl>
+            <dt>Inject Module :</dt>
+            <dd>'vinTip'</dd>
+        </dl>
+        <dl>
+            <dt>Demos : </dt>
+            <dd>마우스 오버</dd>
+        </dl>
+    </article>
+    <div style="margin-left:150px;">
+        <div class="box mb20" vin-tip tip-message="고정팁" tip-direction="up-center" title="title"></div>
+        
+        <div class="mb20">
+            <span vin-tip tip-message="왼쪽 팁입니다." tip-direction="left">Span</span>
+            <span vin-tip tip-message="오른쪽 팁입니다." tip-direction="right">Span</span>
+        </div>
+
+        <div class="mb20">
+            <button type="button" class="btn-tag radi-3em" vin-tip="tipOptions" tip-message="이것은 button 팁입니다." tip-direction="right">button</button>
+            <button type="button" class="btn-tag radi-3em" vin-tip tip-message="이것은 button 팁입니다." tip-direction="right">button</button>
+        </div>
+
+        <div title="browser title attribute" vin-tip tip-message="팁입니다.">browser title attribute</div>
+
+        <a href="#" class="link" title="browser title attribute" vin-tip tip-message="하단 팁" tip-direction="bottom">link</a><br/>
+        <a href="#" class="link" title="browser title attribute" vin-tip tip-message="상단 고정팁" tip-direction="up-center">up tip</a><br/>
+        <a href="#" class="link" title="browser title attribute" vin-tip tip-message="하단 고정팁" tip-direction="down-center">down tip</a>
+    </div>
+</main>

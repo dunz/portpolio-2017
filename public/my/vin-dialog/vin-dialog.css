@@ -1,0 +1,141 @@
+﻿.vin-dialog {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align:center;
+    outline:none;
+    -webkit-font-smoothing: antialiased;
+    z-index:1030;
+    -webkit-transition:all 0.15s linear;
+    -moz-transition:all 0.15s linear;
+    -o-transition:all 0.15s linear;
+    transition:all 0.15s linear;
+    overflow:auto;
+}
+.vin-dialog.open {
+    background:rgba(0,0,0,.8);
+}
+.vin-dialog .vin-dialog-mask {
+    display:inline-block;
+    min-width:100%;
+    min-height:100%;
+    padding:0 10px;
+}
+.vin-dialog .vin-dialog-modal {
+    transition:all 0.2s ease-in-out;
+}
+.vin-dialog .salad-modal-footer button {
+    transition:0.2s ease-in-out;
+    transition-property:background, opacity;
+}
+.vin-dialog .salad-modal-header .x-close-btn {
+    transition:0.2s ease-in-out;
+    transition-property:background, opacity;
+}
+.vin-dialog select, .vin-dialog select * {
+    -webkit-transition:none;
+    -moz-transition:none;
+    -o-transition:none;
+    transition:none;
+}
+.vin-dialog .vin-dialog-modal {
+    position:relative;
+    margin:0 auto;
+    background:#f1f4f8;
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    opacity:0;
+    box-sizing:border-box;
+    text-align:left;
+    -webkit-transform:translate(0, -50px);
+    -moz-transform:translate(0, -50px);
+    -o-transform:translate(0, -50px);
+    transform:translate(0, -50px);
+}
+.vin-dialog .vin-dialog-modal.open {
+    opacity:1;
+    -webkit-transform:translate(0, 0);
+    -moz-transform:translate(0, 0);
+    -o-transform:translate(0, 0);
+    transform:translate(0, 0);
+    margin:40px auto;
+}
+
+.vin-dialog .vin-dialog-modal.full {
+    width:100%;
+    height:100%;
+    max-width:100%;
+    max-height:100%;
+    margin:0;
+}
+.vin-dialog .vin-dialog-modal.xl {
+    width:1484px;
+}
+.vin-dialog .vin-dialog-modal.lg {
+    width:900px;
+}
+.vin-dialog .vin-dialog-modal.md {
+    width:700px;
+}
+.vin-dialog .vin-dialog-modal.sm {
+    width:500px;
+}
+.vin-dialog .vin-dialog-modal.xs {
+    width:300px;
+}
+.vin-dialog .vin-dialog-modal.inline {
+    display:inline-block;
+}
+.vin-dialog .salad-modal-header {
+    height:40px;
+    padding:12px 20px;
+    padding-right:40px;
+    color:#fff;
+    font-size:14px;
+    background:#366480;
+}
+.vin-dialog .salad-modal-header .title {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.vin-dialog .salad-modal-body {
+    padding:20px;
+}
+.vin-dialog .salad-modal-footer {
+    padding:0 20px 20px;
+    text-align:right;
+}
+.vin-dialog .vin-dialog-modal.full .salad-modal-header {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:auto;
+}
+.vin-dialog .vin-dialog-modal.full .salad-modal-body {
+    position:absolute;
+    top:40px;
+    left:0;
+    right:0;
+    bottom:50px;
+    overflow:auto;
+}
+.vin-dialog .vin-dialog-modal.full .salad-modal-footer {
+    position:absolute;
+    top:auto;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.vin-dialog .salad-modal-header .x-close-btn {
+    position:absolute;
+    right:20px;
+    top:10px;
+    opacity:0.5;
+    cursor:pointer;
+}
+.vin-dialog .x-close-btn:hover {
+    opacity:1;
+}

@@ -1,0 +1,43 @@
+<style type="text/css">
+    .vin-dropzone {
+        border:2px solid #999;
+    }
+    .dropzone-inner {
+        margin-top:100px;
+        font-size:5vw;
+    }
+</style>
+<main class="content-main">
+    <article class="usage">
+        <dl>
+            <dt>모듈명 : Vin Dropzone</dt>
+            <dd>설명 : 파일 업로드를 드래그로 쉽게 하기위한 파일전용 패널입니다.</dd>
+        </dl>
+        <dl>
+            <dt>Load Files :</dt>
+            <dd>vin-dropzone/vin-dropzone.css</dd>
+            <dd>vin-dropzone/vin-dropzone.js</dd>
+        </dl>
+        <dl>
+            <dt>Inject Module :</dt>
+            <dd>'vinDropzone'</dd>
+        </dl>
+        <dl>
+            <dt>Demos : </dt>
+            <dd>패널 위에 파일을 드래그 하세요.</dd>
+        </dl>
+    </article>
+    <ul>
+        <li ng-repeat="file in files" class="mb10">
+            <ul>
+                <li><strong>Name:</strong> {{file.name}}</li>
+                <li><strong>Size:</strong> {{file.size}} byte</li>
+                <li><strong>Type:</strong> {{file.type}}</li>
+            </ul>
+        </li>
+    </ul>
+    <vin-dropzone class="full text-center" upload-fn="uploadFile(file)">
+        <p class="dropzone-inner">Drag Files Here</p>
+    </vin-dropzone>
+</main>
+

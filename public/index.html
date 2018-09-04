@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="app">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="my/vin-dialog/vin-dialog.css">
+    <link rel="stylesheet" href="my/vin-dropzone/vin-dropzone.css">
+    <link rel="stylesheet" href="my/vin-loader/vin-loader.css">
+    <link rel="stylesheet" href="my/vin-notify/vin-notify.css">
+    <link rel="stylesheet" href="my/vin-peek/vin-peek.css">
+    <link rel="stylesheet" href="my/vin-tip/vin-tip.css">
+    <link rel="stylesheet" href="my/vin-active-button/vin-active-button.css">
+    <link rel="stylesheet" href="my/quick-msg/quick-msg.css">
+    <link rel="stylesheet" href="my/hidden-menu/hidden-menu.css">
+
+    <!-- library -->
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="libs/angular-click-outside/clickoutside.directive.js"></script>
+    <script src="libs/underscore/underscore.js"></script>
+
+    <!-- my modules -->
+    <script src="my/vin-dialog/vin-dialog.js"></script>
+    <script src="my/vin-dropzone/vin-dropzone.js"></script>
+    <script src="my/vin-loader/vin-loader.js"></script>
+    <script src="my/vin-notify/vin-notify.js"></script>
+    <script src="my/vin-peek/vin-peek.js"></script>
+    <script src="my/vin-tip/vin-tip.js"></script>
+    <script src="my/vin-active-button/vin-active-button.js"></script>
+    <script src="my/quick-msg/quick-msg.js"></script>
+    <script src="my/hidden-menu/hidden-menu.js"></script>
+
+    <!-- components -->
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+    <script src="indexController.js"></script>
+    <script src="components/homeController.js"></script>
+    <script src="components/vinDialogController.js"></script>
+    <script src="components/vinDropzoneController.js"></script>
+    <script src="components/vinLoaderController.js"></script>
+    <script src="components/vinNotifyController.js"></script>
+    <script src="components/vinPeekController.js"></script>
+    <script src="components/vinTipController.js"></script>
+    <script src="components/quickMsgController.js"></script>
+    <script src="components/popupController.js"></script>
+</head>
+<body ng-controller="indexController">
+    <aside class="hfull break p20 profile-aside" ng-class="{'on':isOpenProfileaside}">
+        <article class="abs-r-t profile-aside-toggle">
+            <vin-active-button is-open="isOpenProfileaside" ng-click="isOpenProfileaside=!isOpenProfileaside"></vin-active-button>
+        </article>
+        <article class="full ai-center pt20 col-w">
+            <img src="/images/me.png" class="profile-photo" alt="" />
+            <ul class="child-mv15 profile-info">
+                <li>이동주 ( vindj )</li>
+                <li><a href="tel:010-6718-2013">010-6718-2013</a></li>
+                <li><a href="mailto:ldj525@naver.com">ldj525@naver.com</a></li>
+            </ul>
+
+            <ul class="list-h child-mh10 mb10 mt20 profile-sns" style="min-height:50px;">
+                <li><a href="https://www.facebook.com/profile.php?id=100008378139985" target="_blank"><img src="/images/ic_facebook.png" alt="" /></a></li>
+                <li><a href="https://twitter.com/dvldj" target="_blank"><img src="/images/ic_twitter.png" alt="" /></a></li>
+                <li><a href="https://github.com/ldj525" target="_blank"><img src="/images/ic_github.png" alt="" /></a></li>
+            </ul>
+
+            <article style="border-top:1px solid #fff;" class="wfull opa5 m20"></article>
+
+            <section class="font--2rem child-mv20 ph20 fg1 over-auto as-stretch career">
+                <dl class="child-mv5">
+                    <dt class="font--1rem">경력</dt>
+                    <dd class="opa5">2011.03 - 2014.09</dd>
+                    <dd class="pl20">지커뮤니케이션 웹개발자</dd>
+                    <dd class="opa5">2014.09 - 2016.11</dd>
+                    <dd class="pl20">샐러드소프트 퍼블리싱/프론트</dd>
+                </dl>
+                <dl class="child-mv5">
+                    <dt class="font--1rem">학력</dt>
+                    <dd class="opa5">2003.03 - 2006.02</dd>
+                    <dd class="pl20">충북고등학교 졸업</dd>
+                    <dd class="opa5">2006.02 - 2012.02</dd>
+                    <dd class="pl20">교통대학교 멀티미디어과 졸업</dd>
+                </dl>
+                <dl class="child-mv5">
+                    <dt>자격증</dt>
+                    <dd class="opa5">2011.09</dd>
+                    <dd class="pl20">정보처리기사</dd>
+                </dl>
+                <dl class="child-mv5">
+                    <dt>컨퍼런스</dt>
+                    <dd class="opa5">2016.11.26</dd>
+                    <dd class="pl20">XECon2016</dd>
+                    <dd class="opa5">2013.03.28</dd>
+                    <dd class="pl20">비즈델리 최신트렌드 성공전략</dd>
+                </dl>
+            </section>
+        </article>
+    </aside>
+
+    <div class="list-v contents">
+        <header class="header list-v jc-center">
+            <div class="container text-center pb20">
+                <h1 class="logo in-bl pt10 pointer" ui-sref="home">환영합니다!</h1>
+                <h5 class="opa7">풀스택을 향해가는 프론트엔드 개발자</h6>
+            </div>
+        </header>
+
+        <nav class="tags">
+            <div class="container child-m5 pv5 ph10">
+                <button class="radi-3em btn-tag" ui-sref="vinDialog">Vin Dialog</button>
+                <button class="radi-3em btn-tag" ui-sref="vinDropzone">Vin Dropzone</button>
+                <button class="radi-3em btn-tag" ui-sref="vinLoader">Vin Loader</button>
+                <button class="radi-3em btn-tag" ui-sref="vinNotify">Vin Notify</button>
+                <button class="radi-3em btn-tag" ui-sref="vinPeek">Vin Peek</button>
+                <button class="radi-3em btn-tag" ui-sref="vinTip">Vin Tip</button>
+                <button class="radi-3em btn-tag" ui-sref="quickMsg">Quick Message</button>
+            </div>
+        </nav>
+
+        <section class="fg1 full">
+            <ui-view class="container p20 wfull full"></ui-view>
+        </section>
+    </div>
+
+    <hidden-menu class="profile-bottom col-w list-v jc-center">
+            <article id="hidden-big">
+                <div class="photo-frame ml20">
+                    <img src="/images/me.png" class="profile-photo" alt="" />
+                </div>    
+                <ul class="child-mv10 ml20 profile-info" style="margin-left:35px;">
+                    <li>이동주 ( vindj )</li>
+                    <li><a href="tel:010-6718-2013">010-6718-2013</a></li>
+                    <li><a href="mailto:ldj525@naver.com">ldj525@naver.com</a></li>
+                </ul>
+                <ul class="profile-sns abs-r-t child-mv15 mt20 mr20">
+                    <li><a href="https://www.facebook.com/profile.php?id=100008378139985" target="_blank"><img src="/images/ic_facebook.png" alt="" /></a></li>
+                    <li><a href="https://twitter.com/dvldj" target="_blank"><img src="/images/ic_twitter.png" alt="" /></a></li>
+                    <li><a href="https://github.com/ldj525" target="_blank"><img src="/images/ic_github.png" alt="" /></a></li>
+                </ul>
+            </article>
+            <article id="hidden-small" class="profile-small abs-l-t list-h jc-between ai-center child-mh10">
+                <article>
+                    <img src="/images/me.png" class="profile-small-photo mr5" alt="" />
+                    이동주 ( vindj )
+                </article>
+                <img src="/images/ic_menu32.png" alt="" class="ic-menu" />
+            </article>
+        </hidden-menu> 
+</body>
+</html>

@@ -1,0 +1,196 @@
+﻿@keyframes scale {
+    0%{
+        opacity:0;
+        transform: scale(.7,.7);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+*.vin-peek {
+    position:relative;
+    display:inline-block;
+    -webkit-font-smoothing:antialiased;
+    -webkit-backface-visibility:hidden;
+    -webkit-text-size-adjust:100%;
+}
+.peek-action {
+    outline:0 none;
+    outline:none !important;
+}
+.peek-panel {
+    position:absolute;
+    display:inline-block;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    box-sizing:border-box;
+    text-align:left;
+    z-index:1;
+    display:none;
+    left:0;
+    top:0;
+    /*border:1px solid rgba(0, 0, 0, .3);*/
+    animation:scale .2s ease-in-out;
+    color:#333;
+    line-height:normal;
+    cursor:default;
+}
+
+.peek-panel.open {
+    display:block;
+}
+.peek-panel.up {
+    bottom:100%;
+    top:auto;
+    transform-origin:bottom left;
+}
+.peek-panel.up-right {
+    bottom:100%;
+    top:auto;
+    left:auto;
+    right:0;
+    transform-origin:bottom right;
+}
+.peek-panel.down {
+    top:100%;
+    transform-origin:top left;
+}
+.peek-panel.down-right {
+    top:100%;
+    left:auto;
+    right:0;
+    transform-origin:top right;
+}
+.peek-panel.left {
+    right:100%;
+    left:auto;
+    transform-origin:top right;
+}
+.peek-panel.right {
+    top:0;
+    left:100%;
+    transform-origin:top left;
+}
+.peek-list {
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:12px;
+    border-radius:5px;
+    padding:5px 0;
+}
+.peek-list li {
+    position:relative;
+    display:block;
+    margin:0;
+    padding:0;
+    
+    white-space:nowrap;
+}
+.peek-list li:hover {
+    background:#e8f3f9;
+    border-radius:5px;
+}
+.peek-list li a {
+    display:block;
+    height:100%;
+    width:100%;
+    padding:5px 20px;
+    text-decoration:none;
+    white-space:nowrap;
+    color:#333;
+    outline:none;
+}
+.peek-list li span {
+    display:block;
+    height:100%;
+    width:100%;
+    padding:5px 20px;
+    white-space:nowrap;
+    color:#333;
+}
+.peek-list li span {
+    color:#808080;
+}
+.peek-list li.separated {
+    height:1px;
+    background:rgba(0,0,0,.5);
+    margin:5px 0;
+}
+
+.peek-list .vin-peek .arrow {
+    width:10px;
+    height:10px;
+    background:url(./images/ic_next.png) no-repeat;
+    background-size:contain;
+}
+.peek-list .vin-peek.right > a {
+    padding-right:60px;
+}
+.peek-list .vin-peek.right .arrow-r {
+    position:absolute;
+    right:20px;
+    top:33%;
+    font-size:11px;
+    color:#808080;
+}
+
+.peek-list .vin-peek.left > a {
+    padding-left:60px;
+}
+.peek-list .vin-peek.left .arrow-l {
+    position:absolute;
+    left:20px;
+    top:33%;
+    font-size:11px;
+    color:#808080;
+    transform:rotate(180deg);
+}
+
+.peek-list .vin-peek.down > a {
+    padding-right:60px;
+}
+.peek-list .vin-peek.down .arrow-d {
+    position:absolute;
+    right:20px;
+    top:33%;
+    font-size:11px;
+    color:#808080;
+    transform:rotate(90deg);
+}
+
+.peek-list .vin-peek.down-right > a {
+    padding-right:60px;
+}
+.peek-list .vin-peek.down-right .arrow-d {
+    position:absolute;
+    right:20px;
+    top:33%;
+    font-size:11px;
+    color:#808080;
+    transform:rotate(90deg);
+}
+
+.peek-list .vin-peek.up > a {
+    padding-right:60px;
+}
+.peek-list .vin-peek.up .arrow-u {
+    position:absolute;
+    right:20px;
+    top:33%;
+    font-size:11px;
+    color:#808080;
+    transform:rotate(-90deg);
+}
+
+.peek-list .vin-peek.up-right > a {
+    padding-right:60px;
+}
+.peek-list .vin-peek.up-right .arrow-u {
+    position:absolute;
+    right:20px;
+    top:33%;
+    font-size:11px;
+    color:#808080;
+    transform:rotate(-90deg);
+}

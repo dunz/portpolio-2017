@@ -1,0 +1,26 @@
+<main class="content-main">
+    <article class="usage">
+        <dl>
+            <dt>모듈명 : Quick Message</dt>
+            <dd>설명 : 데이터 변경 시 사용자에게 alert 노출없이 간단히 공지해주기 위한 메시지입니다.</dd>
+        </dl>
+        <dl>
+            <dt>Load Files :</dt>
+            <dd>vin-message/vin-message.css</dd>
+            <dd>vin-message/vin-message.js</dd>
+        </dl>
+        <dl>
+            <dt>Inject Module :</dt>
+            <dd>'quickMsg'</dd>
+        </dl>
+        <dl>
+            <dt>Demos : </dt>
+            <dd>버튼 클릭</dd>
+        </dl>
+    </article>
+    <div class="mb20">
+        <button class="btn-tag radi-3em" ng-click="show=true">set true</button>
+        <quick-msg is-show="show">true 값일때 이 문구 노출되었다 사라진후 false 로 초기화</quick-msg>
+    </div>
+    >> <span class="font-2rem bold">{{show}}</span>
+</main>

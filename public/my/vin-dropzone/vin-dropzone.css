@@ -1,0 +1,65 @@
+﻿.vin-dropzone {
+    position:relative;
+}
+.vin-dropzone .dropzone-full {
+    position:relative;
+    min-height:100%;
+}
+.vin-dropzone .dropzone-full:after {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(27, 212, 206, .5);
+    z-index:-1;
+
+    will-change:opacity, transform;
+    opacity:0;
+    transform:scale(.9);
+    transition-property:opacity transform;
+    transition-duration:.1s;
+}
+.vin-dropzone.overed .dropzone-full:after {
+    background:rgba(27, 212, 206, .5);
+    z-index:1;
+
+    opacity:1;
+    transform:scale(1);
+}
+.vin-dropzone .dropzone-fixed {
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+    visibility:hidden;
+}
+.vin-dropzone .dropzone-fixed:after {
+    content:'Drop files here \A to upload.';
+    white-space:pre;
+    display: inline-block;
+    text-align:center;
+    font-size:5vw;
+    color:#464242;
+    text-shadow:0 0 30px #fff;
+    font-weight:bold;
+    
+    will-change:opacity, transform;
+    opacity:0;
+    transform:translate(0, 0);
+    transition-property:opacity transform;
+    transition-duration:.1s;
+}
+.vin-dropzone.overed .dropzone-fixed {
+    visibility:visible;
+}
+.vin-dropzone.overed .dropzone-fixed:after {
+    opacity:1;
+    transform:translate(0, 20px);
+}

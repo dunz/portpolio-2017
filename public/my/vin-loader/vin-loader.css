@@ -1,0 +1,154 @@
+﻿#vin-loader {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    text-align:center;
+    padding-top:20%;
+    opacity:0;
+    z-index:1031;
+    -webkit-transition:all 0.15s linear;
+    -moz-transition:all 0.15s linear;
+    -o-transition:all 0.15s linear;
+    transition:all 0.15s linear;
+}
+#vin-loader.on {
+    opacity:1;
+}
+#vin-loader .pot {
+    margin:0 auto;
+    text-align:center;
+}
+
+@keyframes pot-lid {
+    25% {
+        transform:rotate(12deg);
+    }
+    50% {
+        transform:rotate(8deg);
+    }
+    75% {
+        transform:rotate(13deg);
+    }
+}
+@keyframes pot-bubble {
+    0% {
+        transform:translate(0, 0) scale(1);
+        opacity:1;
+    }
+    25% {
+        transform:translate(20px, -30px) scale(1);
+        opacity:0.8;
+    }
+    50% {
+        transform:translate(5px, -60px) scale(1);
+        opacity:0.7;
+    }
+    100% {
+        transform:translate(20px, -90px) scale(1.5);
+        opacity:0;
+    }
+}
+@keyframes pot-body {
+    15% {
+        transform:rotate(-5deg);
+    }
+    30% {
+        transform:rotate(5deg);
+    }
+    45% {
+        transform:rotate(-5deg);
+    }
+    60% {
+        transform:rotate(5deg);
+    }
+    75% {
+        transform:rotate(-5deg);
+    }
+}
+
+/* 냄비 뚜껑 */
+#vin-loader .pot .lid {
+    position:relative;
+    background:red;
+    width:200px;
+    height:20px;
+    margin:0 auto;
+    border-radius:50% 50% 0 0;
+    margin-bottom:10px;
+    box-shadow: 0 10px 10px 0 #d0d0d0;
+
+    animation:pot-lid 1s cubic-bezier(.31,1.17,.94,1.29) infinite;
+    transform-origin:bottom right;
+}
+#vin-loader .pot .lid .lidhandle {
+    position:absolute;
+    top:-15px;
+    left:calc(50% - 15px);
+    width:30px;
+    height:30px;
+    background:red;
+    border-radius:50%;
+}
+
+/* 보글보글 */
+#vin-loader .pot .bubbles {
+    position:relative;
+    width:200px;
+    margin:0 auto;
+}
+#vin-loader .pot .bubbles .bubble {
+    position:absolute;
+    top:5px;
+    left:20px;
+    background:#ffd800;
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    border-radius:50%;
+    margin-bottom:10px;
+    box-shadow: 0 1px 1px 0 #d0d0d0;
+
+    animation:pot-bubble 1s linear infinite;
+}
+#vin-loader .pot .bubbles .bubble:nth-child(1) {
+    left:10px;
+    animation-delay: .2s;
+    background:#eeb8e5;
+}
+#vin-loader .pot .bubbles .bubble:nth-child(2) {
+    left:30px;
+    animation-delay: .5s;
+}
+#vin-loader .pot .bubbles .bubble:nth-child(3) {
+    left:50px;
+    animation-delay: .3s;
+    background:#e8ef81;
+}
+#vin-loader .pot .bubbles .bubble:nth-child(4) {
+    left:70px;
+}
+#vin-loader .pot .bubbles .bubble:nth-child(5) {
+    left:90px;
+    background:#ff6a00;
+    animation-delay: .7s;
+}
+#vin-loader .pot .bubbles .bubble:nth-child(6) {
+    left:110px;
+    animation-delay: .9s;
+}
+
+/* 냄비 몸체 */
+#vin-loader .pot .body {
+    position:relative;
+    /*background:#e8ef81;*/
+    background:#53505e;
+    width:200px;
+    height:100px;
+    margin:0 auto;
+    border-radius:0 0 30% 30%;
+    box-shadow: 0 10px 10px 0 #d0d0d0;
+    animation:pot-body 1.5s cubic-bezier(.31,1.17,.94,1.29) infinite;
+}
+

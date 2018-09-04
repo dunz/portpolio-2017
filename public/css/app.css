@@ -1,0 +1,212 @@
+html {
+    font-size:16px;
+    font-family:Roboto,Helvetica Neue,sans-serif;
+    scrollbar-base-color:#bfbfbf; 
+    scrollbar-Face-Color:#bfbfbf;
+    scrollbar-Shadow-Color:#bfbfbf;
+    scrollbar-arrow-color:#808080; 
+    scrollbar-Track-Color:#808080; 
+    
+}
+body {
+    overflow-x:hidden !important;
+}
+::-webkit-scrollbar {
+    width:10px;
+    border-radius: 5px;
+    background:rgba(0,0,0,.5);
+}
+::-webkit-scrollbar-thumb {
+    background:rgba(255,255,255,.5);
+    border-radius: 5px;
+}
+.container {
+    display:block;
+    max-width:1200px;
+}
+.contents {
+    transition:transform .4s;
+    transform:translate(300px, 0);
+    will-change: transform;
+    min-height:100%;
+    padding-bottom:300px;
+}
+@media(max-width:1450px) {
+    .contents {
+        transform:translate(0, 0);
+    }
+}
+.header {
+    height:110px;
+    min-height:110px;
+}
+.logo {
+    font-size:3rem;
+}
+.tags {
+    border-top:1px solid #dfdfdf;
+    border-bottom:1px solid #dfdfdf;
+    /*min-height:200px;*/
+    background:url(/images/bg_code.png) no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    padding-bottom:100px;
+}
+.btn-tag {
+    position:relative;
+    overflow:hidden;
+    height:2em;
+    padding:0 1.5em;
+    background:#fff;
+    font-weight:bold;
+    color:#3e3e3e;
+    box-shadow:rgba(0,0,0,.4) 0 0 10px 0;
+    font-family:Arial;
+}
+.btn-tag:after {
+    position:absolute;
+    content:'';
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.btn-tag:hover:after {
+    animation:flash .1s;
+    animation-fill-mode: both;
+    background: linear-gradient(45deg, yellow, red, green, blue, blueviolet);
+}
+@keyframes flash {
+    from {
+        opacity:0;
+        transform:scale(0);
+    }
+    to {
+        opacity:.2;
+        transform:scale(1);
+    }
+}
+.profile-aside {
+    position:fixed;
+    top:0;
+    left:0;
+    display:block;
+    min-width:300px;
+    width:300px;
+    background:rgba(0,0,0,.7);
+    z-index:1;
+    transition:transform .4s;
+}
+.profile-aside.on {
+    transform:translate(0, 0);
+}
+.profile-aside-toggle {
+    background:rgba(0,0,0,.7);
+    padding:10px 0;
+    width:100px;
+    right:-100px;
+    text-align:center;
+
+    opacity:0;
+    z-index:-1;
+    transition-property: transform, opacity;
+    transition-duration: .4s;
+    transform:translate(-100px, 0);
+}
+@media (max-width: 1450px) {
+    .profile-aside {
+        transform:translate(-300px, 0);
+    }
+    .profile-aside-toggle {
+        z-index:1;
+        opacity:1;
+        transform:translate(0, 0);
+    }
+}
+@media (max-width: 800px) {
+    .profile-aside {
+        display:none;
+    }
+}
+.career > dl > dt {
+    color:#3fab96;
+    font-weight:bold;
+}
+@media (min-width: 801px) {
+  .profile-bottom {
+      display:none;
+  }
+}
+.profile-bottom {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:300px;
+    background:rgba(0,0,0,.7);
+
+    transition:transform .4s;
+    transform:translate(0, 250px);
+}
+.profile-bottom.on {
+    transform:translate(0, 0);
+}
+.profile-small {
+    width:100%;
+    height:50px;
+    cursor:pointer;
+}
+.profile-small-photo {
+    max-width:35px;
+    max-height:35px;
+    border-radius:50%; 
+}
+.photo-frame {
+    overflow:hidden;
+    border-radius:50%;
+    max-width:150px;
+    max-height:150px;
+}
+.profile-photo {
+    max-width:150px;
+    max-height:150px;
+    border-radius:50%;
+}
+.profile-info > li {
+    opacity:.7;
+}
+.profile-info > li:first-of-type {
+    opacity:1;
+    font-weight:bold;
+}
+.profile-sns {
+    /*margin:20px 20px 0 0;*/
+}
+.profile-sns > li > a > img {
+    width:50px;
+    opacity:.7;
+}
+.content-main {
+    padding:20px;
+}
+.usage > dl {
+    margin-bottom:20px;   
+}
+.usage > dl > dt {
+    font-weight: bold;
+    font-size:2rem;
+}
+.usage > dl > dd {
+    text-indent:20px;
+    margin:10px;
+}
+.main-video {
+    box-shadow:rgba(0,0,0,.4) 0 0 10px 0;
+}
+@media(max-width:800px){
+    .main-video {
+        width:100%;
+    }
+    .video-caption {
+        font-size:3.5vw;
+    }
+}

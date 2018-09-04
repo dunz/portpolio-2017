@@ -1,0 +1,35 @@
+<main class="content-main">
+    <article class="usage">
+        <dl>
+            <dt>모듈명 : Vin Dialog</dt>
+            <dd>설명 : 반응형 UX를 가진 angular1 팝업창 입니다.</dd>
+        </dl>
+        <dl>
+            <dt>Load Files :</dt>
+            <dd>vin-dialog/vin-dialog.css</dd>
+            <dd>vin-dialog/vin-dialog.js</dd>
+        </dl>
+        <dl>
+            <dt>Inject Module :</dt>
+            <dd>'vinDialog'</dd>
+        </dl>
+        <dl>
+            <dt>Demos : </dt>
+            <dd>버튼을 클릭하세요.</dd>
+        </dl>
+    </article>
+    <button class="btn-tag radi-3em" ng-click="openDialog()">open</button>
+    <pre>
+        scope.openDialog = function (){
+            vinDialog.open({
+                // size: 'sm',
+                templateUrl: '/components/popup.html',
+                controller: 'popupController'
+            }, function (result) {
+                // alert('ok');
+            }, function () {
+                // alert('cancel');
+            });
+        }
+    </pre>
+</main>
