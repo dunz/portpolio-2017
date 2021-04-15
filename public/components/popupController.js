@@ -11,7 +11,7 @@ function popupController($scope, vinDialog) {
     $scope.openDialog = function (){
         vinDialog.open({
             // size: 'sm',
-            templateUrl: '/components/popup.html',
+            templateUrl: '/public/components/popup.html',
             controller: 'popupController'
         }, function (result) {
             // alert('ok');

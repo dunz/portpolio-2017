@@ -9,42 +9,42 @@ function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
 	$stateProvider.state('home', {
 		url: '/',
-		templateUrl: '/components/home.html',
+		templateUrl: '/public/components/home.html',
 		controller: 'homeController'
 	})
 	$stateProvider.state('vinDialog', {
 		url: '/vindialog',
-		templateUrl: '/components/vinDialog.html',
+		templateUrl: '/public/components/vinDialog.html',
 		controller: 'vinDialogController'
 	})
 	$stateProvider.state('vinDropzone', {
 		url: '/vindropzone',
-		templateUrl: '/components/vinDropzone.html',
+		templateUrl: '/public/components/vinDropzone.html',
 		controller: 'vinDropzoneController'
 	})
 	$stateProvider.state('vinLoader', {
 		url: '/vinloader',
-		templateUrl: '/components/vinLoader.html',
+		templateUrl: '/public/components/vinLoader.html',
 		controller: 'vinLoaderController'
 	})
 	$stateProvider.state('vinNotify', {
 		url: '/vinnotify',
-		templateUrl: '/components/vinNotify.html',
+		templateUrl: '/public/components/vinNotify.html',
 		controller: 'vinNotifyController'
 	})
 	$stateProvider.state('vinPeek', {
 		url: '/vinpeek',
-		templateUrl: '/components/vinPeek.html',
+		templateUrl: '/public/components/vinPeek.html',
 		controller: 'vinPeekController'
 	})
 	$stateProvider.state('vinTip', {
 		url: '/vintip',
-		templateUrl: '/components/vinTip.html',
+		templateUrl: '/public/components/vinTip.html',
 		controller: 'vinTipController'
 	})
 	$stateProvider.state('quickMsg', {
 		url: '/quickmsg',
-		templateUrl: '/components/quickMsg.html',
+		templateUrl: '/public/components/quickMsg.html',
 		controller: 'quickMsgController'
 	})
 }
